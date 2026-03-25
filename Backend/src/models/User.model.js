@@ -19,7 +19,7 @@ const userSchema = new mongoose.Schema({
         lowercase: true,
         validate: {
             validator: function(value) {
-                return /^[a-zA-Z0-9]+$/.test(value);
+                return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
             },
             message: 'Username must be alphanumeric'
         },
@@ -27,7 +27,7 @@ const userSchema = new mongoose.Schema({
     emailOtp : {type:String},
     emailOtpExpiry : {type:Date},
     profilePicture : {type: String},
-    about : {type : string},
+    about : {type : String},
     lastSeen : {type: Date},  
     isOnline : {type: Boolean, default : false},
     isVerified : {type: Boolean, default : false},
