@@ -1,5 +1,4 @@
 const twilio = require('twilio');
-const { PhoneNumberContextImpl } = require('twilio/lib/rest/lookups/v2/phoneNumber');
 
 
 const accountSid = process.env.TWILIO_ACCOUNT_SID;
