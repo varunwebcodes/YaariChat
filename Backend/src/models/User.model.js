@@ -21,7 +21,7 @@ const userSchema = new mongoose.Schema({
             validator: function(value) {
                 return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
             },
-            message: 'Username must be alphanumeric'
+            message: 'Please enter a valid email address'
         },
     },
     emailOtp : {type:String},
